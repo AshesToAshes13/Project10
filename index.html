@@ -20,18 +20,18 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="^[А-Я]{1}[а-я]{1}([-а-я]{0,1})?([А-Яа-я]{0,1})?([а-я]{0,6})?([-а-я]{0,1})?([А-Яа-я]{0,1})?([а-я]{0,9})?$" placeholder="Имя" required minlength="2" maxlength="20"/>
+                        <input class="form__input" type="text" name="name" pattern="[А-ЯЁ][а-яё]{1,19}|[А-ЯЁ][а-яё]{1,9}[-][А-ЯЁ][а-яё]{1,9}?$" minlength="2" maxlength="20" placeholder="Имя" required/>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="email" name="name" pattern="^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)$" placeholder="E-Mail" />
+                        <input class="form__input" type="email" name="name" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="E-Mail" />
                         <span class="form__error">e-mail в формате: sega@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="tel" name="name" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{9,10}$" minlength="" maxlength="" />
+                        <input class="form__input" type="tel" name="name" placeholder="Телефон" pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" minlength="" maxlength="" />
                         <span class="form__error">телефон в формате: +7 (123) 456-78-90</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="url" name="name" pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?|^((http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$" placeholder="Ваш сайт" />
+                        <input class="form__input" type="url" name="name" pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$" placeholder="Ваш сайт" />
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="submit">Отправить</button>
